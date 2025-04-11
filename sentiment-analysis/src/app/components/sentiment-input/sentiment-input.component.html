@@ -1,0 +1,13 @@
+<!-- sentiment-input.component.html -->
+<div class="container">
+    <h2>Sentiment Analysis</h2>
+    <textarea [(ngModel)]="inputText" placeholder="Enter text..."></textarea>
+    <button (click)="analyze()">Analyze</button>
+    
+    <div *ngIf="result" class="result">
+      <p>Sentiment: 
+        <span [class]="result.sentiment">{{ result.sentiment | uppercase }}</span>
+      </p>
+      <p>Analyzed Text: "{{ result.text }}"</p>
+    </div>
+  </div>
